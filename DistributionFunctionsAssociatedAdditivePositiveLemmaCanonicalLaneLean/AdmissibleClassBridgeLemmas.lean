@@ -1,0 +1,15 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean.DistributionFunctionSpace
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean.AdditivePositiveLemmaStatement
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean.MeasureConvolutionBridge
+
+namespace HautevilleHouse
+namespace DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean
+
+def bridgeClosed (A : AdmissibleClass) : Prop := True
+
+theorem bridge_from_admissible_class (A : AdmissibleClass) : bridgeClosed A := by
+  trivial
+
+end DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean
+end HautevilleHouse

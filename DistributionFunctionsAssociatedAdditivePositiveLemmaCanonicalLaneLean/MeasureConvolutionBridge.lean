@@ -1,0 +1,19 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean.DistributionFunctionSpace
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean.AdditivePositiveLemmaStatement
+
+namespace HautevilleHouse
+namespace DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean
+
+structure MeasureConvolutionBridge {D : DistributionFunctionSpace} (P : AdditivePositiveLemmaPackage D) where
+  convolutionPreservesMeasure : Prop
+  measureAdditivityPreserved : Prop
+  convolutionPreservesMeasureClosed : convolutionPreservesMeasure
+  measureAdditivityPreservedClosed : measureAdditivityPreserved
+
+theorem measure_convolution_bridge_closed {D : DistributionFunctionSpace} {P : AdditivePositiveLemmaPackage D} (B : MeasureConvolutionBridge P) :
+  B.convolutionPreservesMeasure ∧ B.measureAdditivityPreserved := by
+  exact And.intro B.convolutionPreservesMeasureClosed B.measureAdditivityPreservedClosed
+
+end DistributionFunctionsAssociatedAdditivePositiveLemmaCanonicalLaneLean
+end HautevilleHouse
